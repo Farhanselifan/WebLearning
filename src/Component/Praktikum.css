@@ -1,0 +1,15 @@
+.student-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+}
+
+.student-card h3 {
+  margin: 0 0 10px;
+}
+
+.student-card ul {
+  padding-left: 20px;
+}
