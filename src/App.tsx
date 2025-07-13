@@ -8,6 +8,7 @@ import TodoList from "./Component/TodoList";
 import FormNuseState from "./Component/FormNuseState"
 import SearchFilter from "./Component/SearchFilter";
 import Modul3 from "./Component/Modul3";
+import UseEfek from "./Component/UseEfek"
 import "./index.css";
 
 
@@ -16,8 +17,11 @@ import "./index.css";
 
 const App = () => {
   return (
+    
     <div className=''>
+      
       <Header  />
+      <UseEfek />
       <div className="min-md: flex justify-center items-center bg-orange-100 p-10">
         <Praktikum 
         name="Farhan Abdurrahman"
@@ -40,6 +44,7 @@ const App = () => {
       <TodoList />
       <SearchFilter />
       <Modul3 />
+      
     </div>
     
   );
