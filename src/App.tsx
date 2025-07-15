@@ -9,6 +9,7 @@ import FormNuseState from "./Component/FormNuseState"
 import SearchFilter from "./Component/SearchFilter";
 import Modul3 from "./Component/Modul3";
 import UseEfek from "./Component/UseEfek"
+import UseContext from "./Component/UseContext"
 import "./index.css";
 
 
@@ -19,8 +20,8 @@ const App = () => {
   return (
     
     <div className=''>
-      
       <Header  />
+      <UseContext />
       <UseEfek />
       <div className="min-md: flex justify-center items-center bg-orange-100 p-10">
         <Praktikum 
