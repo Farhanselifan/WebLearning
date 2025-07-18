@@ -10,6 +10,9 @@ import SearchFilter from "./Component/SearchFilter";
 import Modul3 from "./Component/Modul3";
 import UseEfek from "./Component/UseEfek"
 import UseContext from "./Component/UseContext"
+import UseReducer from "./Component/UseReducer"
+import { Counter } from './features/counter/Counter'
+
 import "./index.css";
 
 
@@ -18,9 +21,10 @@ import "./index.css";
 
 const App = () => {
   return (
-    
     <div className=''>
       <Header  />
+      <Counter />
+      <UseReducer />
       <UseContext />
       <UseEfek />
       <div className="min-md: flex justify-center items-center bg-orange-100 p-10">
@@ -45,7 +49,6 @@ const App = () => {
       <TodoList />
       <SearchFilter />
       <Modul3 />
-      
     </div>
     
   );
