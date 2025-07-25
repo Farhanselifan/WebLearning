@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './MainContent.css'; // Import the CSS file
 import ironmanImage from './Image/DFW.png';
 

@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "age": 25,
+      "city": "Jakarta"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "age": 30,
+      "city": "Bandung"
+    },
+    {
+      "id": "3",
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "age": 35,
+      "city": "Surabaya"
+    },
+    {
+      "id": "23a8",
+      "name": "sdssd",
+      "email": "dr@edwd.we",
+      "age": "34",
+      "city": "34"
+    },
+    {
+      "id": "ebcd",
+      "name": "Farhan Abdurrahman",
+      "email": "farhanselifan@gmail.com",
+      "age": 23,
+      "city": "Wonosobo ",
+      "password": "Xyperfume999"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Learning React",
+      "content": "React is a powerful library for building user interfaces",
+      "userId": 1
+    },
+    {
+      "id": "2",
+      "title": "Understanding APIs",
+      "content": "APIs enable communication between different software systems",
+      "userId": 2
+    }
+  ]
+}

@@ -1,57 +1,53 @@
-
+import React from "react";
 import Header from "./Component/Header";
-import Praktikum from "./Component/Praktikum";
-import Modul2 from "./Component/Modul2";
-import CounterApp from "./Component/CounterApp";
-import SimpleCounter from "./Component/SimpleCounter"
-import TodoList from "./Component/TodoList";
-import FormNuseState from "./Component/FormNuseState"
-import SearchFilter from "./Component/SearchFilter";
-import Modul3 from "./Component/Modul3";
-import UseEfek from "./Component/UseEfek"
-import UseContext from "./Component/UseContext"
-import UseReducer from "./Component/UseReducer"
-import { Counter } from './features/counter/Counter'
-
-import "./index.css";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import LearningProcess from "./Component/LearningProcess"
+import FrontExercise from "./Component/FrontExercise"
+import "./index.css"
 
 
+// Active link highlighting (optional)
+const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => {
+  const location = useLocation();
+  const isActive = location.pathname === to;
 
-
+  return (
+    <Link
+      to={to}
+      className={`px-6 py-3 text-2xl font-mono font-semibold rounded-lg shadow transition duration-300 ${
+        isActive
+          ? "bg-blue-600 text-white"
+          : "bg-white hover:bg-blue-100 text-blue-800"
+      }`}
+    >
+      {children}
+    </Link>
+  );
+};
 
 const App = () => {
   return (
-    <div className=''>
-      <Header  />
-      <Counter />
-      <UseReducer />
-      <UseContext />
-      <UseEfek />
-      <div className="min-md: flex justify-center items-center bg-orange-100 p-10">
-        <Praktikum 
-        name="Farhan Abdurrahman"
-        studentId="12345600999"
-        grade={99}
-        subjects={["Math", "Science", "English"]}     />
+    <Router>
+      <div className="min-h-screen bg-gradient-to-br from-blue-100 via-emerald-50 to-amber-100">
+        <Header />
+
+        <main className="flex flex-col items-center justify-center px-4 py-10">
+          <nav className="flex gap-6 mb-8">
+            <NavLink to="/">Learning Process</NavLink>
+            <NavLink to="/Front">Frontend Exercise</NavLink>
+          </nav>
+
+          <section className="w-full max-w-5xl p-6 bg-white rounded-xl shadow-lg">
+            <Routes>
+              <Route path="/" element={<LearningProcess />} />
+              <Route path="/Front" element={<FrontExercise />} />
+            </Routes>
+          </section>
+        </main>
       </div>
-      <div className='flex justify-center p-20'>
-        <Modul2 />
-      </div>
-      <div className='flex justify-center p-20 bg-neutral-100'>
-        <CounterApp/>
-      </div>
-      <div className = 'flex justify-center p-40 bg-blue-100'> 
-        <SimpleCounter />
-      </div>
-      <div className = 'flex justify-center p-30'> 
-        <FormNuseState />
-      </div>
-      <TodoList />
-      <SearchFilter />
-      <Modul3 />
-    </div>
-    
+    </Router>
   );
 };
+
 
 export default App;
